@@ -126,18 +126,18 @@ public class Calculate extends JPanel {
                 String clr = event.getActionCommand();
                 String show = display.getText();
 
-                if(clr.equals("C")){
+                if(clr.equals("CE")){
                     int len = show.length();
                     if(len==1){
-                        display.setText("0");
+                        display.setText(" ");
                     }
                     else {
-                        show = show.substring(len-1);
+                        show = show.substring(0,len-1);
                         result = Double.parseDouble(show);
                         display.setText(show);
                     }
                 }
-                if(clr.equals("CE")){
+                if(clr.equals("C")){
                     display.setText("0");
                     result=0;
                 }
